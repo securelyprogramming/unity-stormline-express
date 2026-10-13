@@ -1,0 +1,69 @@
+{
+  "art": {
+    "accent": "#99c9ff",
+    "kind": "original-vector",
+    "motif": "Steam engine crossing a storm",
+    "provenance": "Repository-native SVG authored for this game; no paid source artwork.",
+    "sourceSha256": "ccae886dfecee665f332ff8bcbf6797921cd622ed335ef4e9be8b88dd399a375"
+  },
+  "assets": {
+    "icon-128.png": {
+      "bytes": 16831,
+      "sha256": "20c7d11414b1f73d9bc3219c7ad2b13e9e1e943f4a5a3936ca2dd73603ae8fff"
+    },
+    "icon-16.png": {
+      "bytes": 856,
+      "sha256": "d248a4061b3d3d6eb39da9c9aab67ec46726b2724bc1fffc6cd67427a10dacc4"
+    },
+    "icon-256.png": {
+      "bytes": 45084,
+      "sha256": "918c9dbf72a86e15253a5b85b6ddd058eb0664e28c4438e2ac9edcdd6425997b"
+    },
+    "icon-32.png": {
+      "bytes": 2269,
+      "sha256": "47a984fb5b0d9124bf738817e1826080a27ab2297535ffd8cee8383afb6cf1a7"
+    },
+    "icon-512.png": {
+      "bytes": 116853,
+      "sha256": "4dcc61f36e898c20712bbe49f2176de8ee367f921d5133234f7ec5b6069f8ac7"
+    },
+    "icon-64.png": {
+      "bytes": 6375,
+      "sha256": "dc89735e82c924a2904559eb4e71d7067b73329741c2adb56fe785c48bd773a9"
+    },
+    "icon.bmp": {
+      "bytes": 196662,
+      "sha256": "23f0e514cac4eae1a7d5cf38a469825349a11988afa2bf58b531b82d85bb2a74"
+    },
+    "icon.icns": {
+      "bytes": 544973,
+      "sha256": "076ff50c70fa24fe47871d1dbc98b7fac7c8a174fb302f59a06c2f077ea89b7f"
+    },
+    "icon.ico": {
+      "bytes": 78151,
+      "sha256": "6a0f83680152850123fe37f7185a3bea93e290a7c0d898155b60fb84f110d283"
+    },
+    "icon.png": {
+      "bytes": 224665,
+      "sha256": "9da3309b57beb56f898a5913726ebcfed08e8b20a8b339de67dfd56ced2bea5a"
+    },
+    "source.png": {
+      "bytes": 226960,
+      "sha256": "ccae886dfecee665f332ff8bcbf6797921cd622ed335ef4e9be8b88dd399a375"
+    },
+    "source.svg": {
+      "bytes": 1546,
+      "sha256": "c682b351692620409674c15c979088f6f498e625fd85ef315fea50aee849550d"
+    }
+  },
+  "gameId": "stormline-express",
+  "installs": [
+    {
+      "asset": "source.png",
+      "path": "Assets/Editor/Branding/GameAppIcon.png"
+    }
+  ],
+  "pipeline": "securelyprogramming/game-workbench/scripts/game-icons.py",
+  "schemaVersion": 1,
+  "scope": "Application icons only; store capsules and platform release certification are separate."
+}

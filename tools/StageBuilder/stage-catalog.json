@@ -15,16 +15,16 @@
       "managedBy": "frontier-workbench-v1",
       "images": {
         "preview": {
-          "path": "Portfolio/Previews/frontier/stormline-express/2026-10-13/gameplay-chapter1.png",
-          "bytes": 175232,
-          "sha256": "a088120f2800d1bd22528f5f3aa1fc140ddcfa6b957b157ae197da308ed6ea92",
+          "path": "Portfolio/Previews/polish/2026-10-13/stormline-express/gameplay-chapter1.png",
+          "bytes": 184037,
+          "sha256": "f6325fa33730c284d544582bc3af527f16285273f14042e78b0dab7d726c6445",
           "width": 1440,
           "height": 900
         }
       },
       "notes": [
         "Ada takes the relief train into a storm after the town radio goes quiet.",
-        "ScreenCapture from the Unity 6000.6.0f1 native OSXPlayer; report capture kind chapter1, chapter 1, simulation tick 240.",
+        "Fresh polished Unity6000.6 macOS player, 2026-10-13. Actual ScreenCapture: chapter1, chapter 1, simulation tick 240.",
         "The matching native report records three chapters completed through production commands. This capture is a view of the listed chapter, not a playable browser build.",
         "Physical controller ergonomics, separate-machine LAN, Windows/Linux execution and Steam release acceptance remain separate checks."
       ],
@@ -41,16 +41,16 @@
       "managedBy": "frontier-workbench-v1",
       "images": {
         "preview": {
-          "path": "Portfolio/Previews/frontier/stormline-express/2026-10-13/gameplay-chapter2.png",
-          "bytes": 178012,
-          "sha256": "3615d1f8afeb645b2d743c0b91f41873caa2c0ddc4d7bf89e24c8a963bd50ede",
+          "path": "Portfolio/Previews/polish/2026-10-13/stormline-express/gameplay-chapter2.png",
+          "bytes": 188040,
+          "sha256": "244802d413bad6242df6c20a14ed0b3b635f4bd1bd74c7330065dcc597d47ea5",
           "width": 1440,
           "height": 900
         }
       },
       "notes": [
         "Bo counts stranded passengers while the boiler leaks and the rails begin to buckle.",
-        "ScreenCapture from the Unity 6000.6.0f1 native OSXPlayer; report capture kind chapter2, chapter 2, simulation tick 242.",
+        "Fresh polished Unity6000.6 macOS player, 2026-10-13. Actual ScreenCapture: chapter2, chapter 2, simulation tick 242.",
         "The matching native report records three chapters completed through production commands. This capture is a view of the listed chapter, not a playable browser build.",
         "Physical controller ergonomics, separate-machine LAN, Windows/Linux execution and Steam release acceptance remain separate checks."
       ],
@@ -67,16 +67,16 @@
       "managedBy": "frontier-workbench-v1",
       "images": {
         "preview": {
-          "path": "Portfolio/Previews/frontier/stormline-express/2026-10-13/gameplay-chapter3.png",
-          "bytes": 177242,
-          "sha256": "1d1cf06cf2284fc9b805e2500de96ad5963e9bb7e65e91be68eb187250a8caf3",
+          "path": "Portfolio/Previews/polish/2026-10-13/stormline-express/gameplay-chapter3.png",
+          "bytes": 191425,
+          "sha256": "7c78b54fd22ec61b91eba3c06c7efd9add7a2a85f5f704fa688f5b4286c11c3f",
           "width": 1440,
           "height": 900
         }
       },
       "notes": [
         "Lark lights the final platform. The crew must bring both train and people through the storm.",
-        "ScreenCapture from the Unity 6000.6.0f1 native OSXPlayer; report capture kind chapter3, chapter 3, simulation tick 242.",
+        "Fresh polished Unity6000.6 macOS player, 2026-10-13. Actual ScreenCapture: chapter3, chapter 3, simulation tick 242.",
         "The matching native report records three chapters completed through production commands. This capture is a view of the listed chapter, not a playable browser build.",
         "Physical controller ergonomics, separate-machine LAN, Windows/Linux execution and Steam release acceptance remain separate checks."
       ],
@@ -93,16 +93,16 @@
       "managedBy": "frontier-workbench-v1",
       "images": {
         "preview": {
-          "path": "Portfolio/Previews/frontier/stormline-express/2026-10-13/gameplay-menu.png",
-          "bytes": 149983,
-          "sha256": "0998bd32a62d3d605b082c5b8cec25af62fc893ea0c96ed33073998858ff4920",
+          "path": "Portfolio/Previews/polish/2026-10-13/stormline-express/gameplay-menu.png",
+          "bytes": 144275,
+          "sha256": "34e14d360d74df7670ffe1bf8e1a81ff2b9b549b94452d90ba1ffbfa911b29ff",
           "width": 1440,
           "height": 900
         }
       },
       "notes": [
-        "ScreenCapture from the Unity 6000.6.0f1 native OSXPlayer; report capture kind menu, chapter 1, simulation tick 0.",
         "The matching native report records three chapters completed through production commands. This capture is a view of the listed chapter, not a playable browser build.",
+        "Fresh polished Unity6000.6 macOS player, 2026-10-13. Actual ScreenCapture: menu, chapter 1, simulation tick 0.",
         "Physical controller ergonomics, separate-machine LAN, Windows/Linux execution and Steam release acceptance remain separate checks."
       ],
       "sourceEvidence": [
@@ -116,16 +116,16 @@
       "managedBy": "frontier-workbench-v1",
       "images": {
         "preview": {
-          "path": "Portfolio/Previews/frontier/stormline-express/2026-10-13/gameplay-story.png",
-          "bytes": 161880,
-          "sha256": "76ed31661cdbeb0493465ecbc3b705f384f79035a3715da9887b0633f2da258c",
+          "path": "Portfolio/Previews/polish/2026-10-13/stormline-express/gameplay-story.png",
+          "bytes": 161885,
+          "sha256": "e1d99af7968dad579d6e8cd1ee5d52514f6494d7baa63cf9a1243b61c64cdac8",
           "width": 1440,
           "height": 900
         }
       },
       "notes": [
-        "ScreenCapture from the Unity 6000.6.0f1 native OSXPlayer; report capture kind story, chapter 1, simulation tick 0.",
         "The matching native report records three chapters completed through production commands. This capture is a view of the listed chapter, not a playable browser build.",
+        "Fresh polished Unity6000.6 macOS player, 2026-10-13. Actual ScreenCapture: story, chapter 1, simulation tick 0.",
         "Physical controller ergonomics, separate-machine LAN, Windows/Linux execution and Steam release acceptance remain separate checks."
       ],
       "sourceEvidence": [
@@ -139,16 +139,16 @@
       "managedBy": "frontier-workbench-v1",
       "images": {
         "preview": {
-          "path": "Portfolio/Previews/frontier/stormline-express/2026-10-13/gameplay-victory1.png",
-          "bytes": 183270,
-          "sha256": "2c37bb5f9c99bb435cfd0ba5d63b18c07293717ade4451ad9ecba04012f94b8d",
+          "path": "Portfolio/Previews/polish/2026-10-13/stormline-express/gameplay-victory1.png",
+          "bytes": 189109,
+          "sha256": "62459b4d3452a7be892cc4ff0ce95a3ae2e3df0e118dd10e73e6b59f1a9381e4",
           "width": 1440,
           "height": 900
         }
       },
       "notes": [
-        "ScreenCapture from the Unity 6000.6.0f1 native OSXPlayer; report capture kind victory1, chapter 1, simulation tick 1804.",
         "The matching native report records three chapters completed through production commands. This capture is a view of the listed chapter, not a playable browser build.",
+        "Fresh polished Unity6000.6 macOS player, 2026-10-13. Actual ScreenCapture: victory1, chapter 1, simulation tick 1804.",
         "Physical controller ergonomics, separate-machine LAN, Windows/Linux execution and Steam release acceptance remain separate checks."
       ],
       "sourceEvidence": [
@@ -162,16 +162,16 @@
       "managedBy": "frontier-workbench-v1",
       "images": {
         "preview": {
-          "path": "Portfolio/Previews/frontier/stormline-express/2026-10-13/gameplay-story2.png",
-          "bytes": 172270,
-          "sha256": "e9274689e6ac1aa43ecbfbf6b246861e8267ce04951c7cf9721ee77b5cc5b80b",
+          "path": "Portfolio/Previews/polish/2026-10-13/stormline-express/gameplay-story2.png",
+          "bytes": 175320,
+          "sha256": "ac44c4519108fea3936e3325541b78d81b1152f76629411e7ec6dc18d80a61b1",
           "width": 1440,
           "height": 900
         }
       },
       "notes": [
-        "ScreenCapture from the Unity 6000.6.0f1 native OSXPlayer; report capture kind story2, chapter 2, simulation tick 2.",
         "The matching native report records three chapters completed through production commands. This capture is a view of the listed chapter, not a playable browser build.",
+        "Fresh polished Unity6000.6 macOS player, 2026-10-13. Actual ScreenCapture: story2, chapter 2, simulation tick 2.",
         "Physical controller ergonomics, separate-machine LAN, Windows/Linux execution and Steam release acceptance remain separate checks."
       ],
       "sourceEvidence": [
@@ -185,16 +185,16 @@
       "managedBy": "frontier-workbench-v1",
       "images": {
         "preview": {
-          "path": "Portfolio/Previews/frontier/stormline-express/2026-10-13/gameplay-victory2.png",
-          "bytes": 185291,
-          "sha256": "cd9935fd497a47e95feaa896a5737ee5f5d9a1ce380b0ed4b57d6bb8e6a617d4",
+          "path": "Portfolio/Previews/polish/2026-10-13/stormline-express/gameplay-victory2.png",
+          "bytes": 190222,
+          "sha256": "700781c6802fec15c55b2d5b68ef1da296196fba2a1c0b0da686d60a88402209",
           "width": 1440,
           "height": 900
         }
       },
       "notes": [
-        "ScreenCapture from the Unity 6000.6.0f1 native OSXPlayer; report capture kind victory2, chapter 2, simulation tick 1849.",
         "The matching native report records three chapters completed through production commands. This capture is a view of the listed chapter, not a playable browser build.",
+        "Fresh polished Unity6000.6 macOS player, 2026-10-13. Actual ScreenCapture: victory2, chapter 2, simulation tick 1849.",
         "Physical controller ergonomics, separate-machine LAN, Windows/Linux execution and Steam release acceptance remain separate checks."
       ],
       "sourceEvidence": [
@@ -208,16 +208,16 @@
       "managedBy": "frontier-workbench-v1",
       "images": {
         "preview": {
-          "path": "Portfolio/Previews/frontier/stormline-express/2026-10-13/gameplay-story3.png",
-          "bytes": 174699,
-          "sha256": "3ebf6727eb804f1705080b75c2faf44de3598ee8c28db4224349706151450c10",
+          "path": "Portfolio/Previews/polish/2026-10-13/stormline-express/gameplay-story3.png",
+          "bytes": 179230,
+          "sha256": "a57ac07770bc4987d31de24ddb94087526503c88afed0c3643cfd519c2eea3fd",
           "width": 1440,
           "height": 900
         }
       },
       "notes": [
-        "ScreenCapture from the Unity 6000.6.0f1 native OSXPlayer; report capture kind story3, chapter 3, simulation tick 2.",
         "The matching native report records three chapters completed through production commands. This capture is a view of the listed chapter, not a playable browser build.",
+        "Fresh polished Unity6000.6 macOS player, 2026-10-13. Actual ScreenCapture: story3, chapter 3, simulation tick 2.",
         "Physical controller ergonomics, separate-machine LAN, Windows/Linux execution and Steam release acceptance remain separate checks."
       ],
       "sourceEvidence": [
@@ -231,16 +231,16 @@
       "managedBy": "frontier-workbench-v1",
       "images": {
         "preview": {
-          "path": "Portfolio/Previews/frontier/stormline-express/2026-10-13/gameplay-victory3.png",
-          "bytes": 185069,
-          "sha256": "8874b9d6b7497bc3d869d52c34837daea4dfb281b62d50584edcf9f8ae527eb1",
+          "path": "Portfolio/Previews/polish/2026-10-13/stormline-express/gameplay-victory3.png",
+          "bytes": 191768,
+          "sha256": "7451ab5fd2be151bd63f200780eb1c70cdd27945f3f5ca4c4e4a3b9e7d195f00",
           "width": 1440,
           "height": 900
         }
       },
       "notes": [
-        "ScreenCapture from the Unity 6000.6.0f1 native OSXPlayer; report capture kind victory3, chapter 3, simulation tick 1820.",
         "The matching native report records three chapters completed through production commands. This capture is a view of the listed chapter, not a playable browser build.",
+        "Fresh polished Unity6000.6 macOS player, 2026-10-13. Actual ScreenCapture: victory3, chapter 3, simulation tick 1820.",
         "Physical controller ergonomics, separate-machine LAN, Windows/Linux execution and Steam release acceptance remain separate checks."
       ],
       "sourceEvidence": [
@@ -254,16 +254,16 @@
       "managedBy": "frontier-workbench-v1",
       "images": {
         "preview": {
-          "path": "Portfolio/Previews/frontier/stormline-express/2026-10-13/gameplay-finale.png",
-          "bytes": 161298,
-          "sha256": "178bb0611a84a3c64f1f6471fd72ad823780434162e6b6f075745d9ab374e799",
+          "path": "Portfolio/Previews/polish/2026-10-13/stormline-express/gameplay-finale.png",
+          "bytes": 161796,
+          "sha256": "9851d978a7f8298edc9490d8dfa26aabc034ddbb14e573297ba1de71f11b5a3a",
           "width": 1440,
           "height": 900
         }
       },
       "notes": [
-        "ScreenCapture from the Unity 6000.6.0f1 native OSXPlayer; report capture kind finale, chapter 3, simulation tick 1820.",
         "The matching native report records three chapters completed through production commands. This capture is a view of the listed chapter, not a playable browser build.",
+        "Fresh polished Unity6000.6 macOS player, 2026-10-13. Actual ScreenCapture: finale, chapter 3, simulation tick 1820.",
         "Physical controller ergonomics, separate-machine LAN, Windows/Linux execution and Steam release acceptance remain separate checks."
       ],
       "sourceEvidence": [
