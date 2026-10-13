@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "stormline-express",
+  "title": "Stormline Express",
+  "engine": "Unity",
+  "family": "Cooperative train rescue",
+  "projectPath": "Game",
+  "gameType": "3d-game",
+  "description": "Rescue passengers, repair track and radio, fuel a relief train, and manage steam pressure during the journey. Three-chapter development prototype; controller, multiplayer, platform and Steam release acceptance are tracked separately.",
+  "links": {
+    "repository": "https://github.com/securelyprogramming/unity-stormline-express",
+    "websiteRepository": null,
+    "website": null,
+    "jira": null
+  },
+  "builder": {
+    "openScript": null,
+    "guide": "unity-stormline-express/tools/StageBuilder/README.md"
+  },
+  "catalog": "unity-stormline-express/tools/StageBuilder/stage-catalog.json"
+}

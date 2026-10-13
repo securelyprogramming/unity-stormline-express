@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "stormline-express",
+  "title": "Stormline Express",
+  "mode": "stormline-express",
+  "genre": "cooperative-train-rescue",
+  "brief": "Repair track and radio faults, manage boiler pressure, collect supplies and rescue passengers along a storm route.",
+  "seed": 508,
+  "difficulty": 1,
+  "repository": "https://github.com/securelyprogramming/unity-stormline-express",
+  "folder": "unity-stormline-express",
+  "engine": "Unity",
+  "engineVersion": "6000.6.0f1",
+  "project": "Game",
+  "targetPlatforms": [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  "storeTarget": "Steam premium PC",
+  "players": "1–4 LAN cooperative players; local solo campaign",
+  "accent": "#6cadd0",
+  "setting": "railway",
+  "enemy": "raider",
+  "cast": [
+    {
+      "name": "Ada Rail",
+      "role": "engineer"
+    },
+    {
+      "name": "Bo Finch",
+      "role": "conductor"
+    },
+    {
+      "name": "Lark",
+      "role": "signal keeper"
+    }
+  ],
+  "chapters": [
+    {
+      "number": 1,
+      "title": "The Broken Signal",
+      "story": "Ada takes the relief train into a storm after the town radio goes quiet.",
+      "layoutSeed": 508
+    },
+    {
+      "number": 2,
+      "title": "Pressure and Rain",
+      "story": "Bo counts stranded passengers while the boiler leaks and the rails begin to buckle.",
+      "layoutSeed": 681
+    },
+    {
+      "number": 3,
+      "title": "The Last Platform",
+      "story": "Lark lights the final platform. The crew must bring both train and people through the storm.",
+      "layoutSeed": 854
+    }
+  ],
+  "status": "development; build, gameplay, physical controller, multi-machine LAN and Steam release acceptance tracked separately",
+  "inspiration": "Original characters, names, story and code; genre references are design inspiration only."
+}
