@@ -120,20 +120,21 @@ namespace Mayo.Frontier.Presentation
         }
         public ActionResult Send(Command command,bool feedback=true)
         {
+            /* workbench-debug-command */ if(command!=null && command.kind!="move" && command.kind!="aim") WorkbenchDebug.Event(command.kind+".requested","simulation",LocalPlayerId.ToString(),"option="+command.option+"; target="+command.targetId+"; stage="+State?.stage);
             var current=State?.players?.Find(p=>p.id==LocalPlayerId);if(current!=null)sequence=Math.Max(sequence,current.lastSequence);command.sequence=++sequence;
             if(IsClient){if(lan.SendCommand(JsonUtility.ToJson(command)))return new ActionResult(true,"Sent to host.");return new ActionResult(false,"Not connected to host.");}
-            var result=Rules.Apply(0,command);if(result.accepted){CommandsAccepted++;if(command.kind=="attack"||command.kind=="interact")audio.Cue(command.kind);}if(feedback&&!string.IsNullOrEmpty(result.reason))Notice=result.reason;State=Rules.State;return result;
+            var result=Rules.Apply(0,command); /* workbench-debug-result */ if(command!=null && command.kind!="move" && command.kind!="aim") WorkbenchDebug.Event(command.kind+(result.accepted?".accepted":".rejected"),"simulation",LocalPlayerId.ToString(),result.reason);if(result.accepted){CommandsAccepted++;if(command.kind=="attack"||command.kind=="interact")audio.Cue(command.kind);}if(feedback&&!string.IsNullOrEmpty(result.reason))Notice=result.reason;State=Rules.State;return result;
         }
-        public void StartSolo(){Disconnect();interactionChoice="";sequence=0;observedWin=-1;Rules=new Simulation(Profile.Rules(),Mathf.Clamp(ChapterChoice,1,Progress.unlocked));State=Rules.State;Show("story");}
-        public void BeginChapter(){SessionStarted=true;Show("play");}
+        public void StartSolo(){ /* workbench-debug */ WorkbenchDebug.Event("StartSolo.requested","gameplay","","FrontierGame.StartSolo"); Disconnect();interactionChoice="";sequence=0;observedWin=-1;Rules=new Simulation(Profile.Rules(),Mathf.Clamp(ChapterChoice,1,Progress.unlocked));State=Rules.State;Show("story");}
+        public void BeginChapter(){ /* workbench-debug */ WorkbenchDebug.Event("BeginChapter.requested","gameplay","","FrontierGame.BeginChapter"); SessionStarted=true;Show("play");}
         public void Advance(){Send(new Command{kind="advance"});SessionStarted=false;Show("story");}
         public void Retry(){Send(new Command{kind="restart"});SessionStarted=false;observedWin=-1;Show("story");}
         public void OpenPanel(string screen){if(State?.phase=="active"){Send(new Command{kind="move"},false);if(!IsNetworked)Send(new Command{kind="pause"},false);}Show(screen);}
         public void Resume(){if(!IsNetworked&&State.phase=="paused")Send(new Command{kind="pause"},false);Show("play");}
-        public void Show(string screen){ScreenName=screen;inputGuardUntil=Time.unscaledTime+.15f;UI.Show(screen);}
-        public void SelectBuild(string option){buildChoice=option;Notice="Build selected: "+option;Resume();}
-        public void SelectInteraction(string option){interactionChoice=option;Notice="Interaction selected: "+(option==""?"default":option);Resume();}
-        public void SelectCraft(string option){craftChoice=option;Notice="Craft selected: "+option;Resume();}
+        public void Show(string screen){ /* workbench-debug */ WorkbenchDebug.Event("Show.requested","gameplay",screen,"screen transition"); ScreenName=screen;inputGuardUntil=Time.unscaledTime+.15f;UI.Show(screen);}
+        public void SelectBuild(string option){ /* workbench-debug */ WorkbenchDebug.Event("SelectBuild.requested","gameplay",option,"build selection"); buildChoice=option;Notice="Build selected: "+option;Resume();}
+        public void SelectInteraction(string option){ /* workbench-debug */ WorkbenchDebug.Event("SelectInteraction.requested","gameplay",option,"interaction selection"); interactionChoice=option;Notice="Interaction selected: "+(option==""?"default":option);Resume();}
+        public void SelectCraft(string option){ /* workbench-debug */ WorkbenchDebug.Event("SelectCraft.requested","gameplay",option,"craft selection"); craftChoice=option;Notice="Craft selected: "+option;Resume();}
         public void AssignResident(int targetId,string role)
         {
             bool restorePause=!IsNetworked&&State?.phase=="paused";
@@ -149,12 +150,12 @@ namespace Mayo.Frontier.Presentation
         public void BackToTitle(){Disconnect();Rules=new Simulation(Profile.Rules());State=Rules.State;Show("title");}
         public void NewCampaign(){Progress.unlocked=1;Progress.completedMask=0;Store.Save(Progress);ChapterChoice=1;StartSolo();}
         public void Host()
-        {
+        { /* workbench-debug */ WorkbenchDebug.Event("Host.requested","gameplay","","FrontierGame.Host");
             Disconnect();interactionChoice="";Rules=new Simulation(Profile.Rules(),Mathf.Clamp(ChapterChoice,1,Progress.unlocked));State=Rules.State;sequence=0;observedWin=-1;
             try{lan=LanSession.Host(Profile.id,Port,"0.0.0.0",3);WireLan();try{discovery=LanDiscovery.Advertise(Profile.id,Port,Profile.title,Port+1);}catch(Exception e){Notice="Direct-address hosting ready; discovery unavailable: "+e.Message;}Show("lobby");}catch(Exception e){Notice="Could not host: "+e.Message;Disconnect();Show("lan");}
         }
         public void Join()
-        {
+        { /* workbench-debug */ WorkbenchDebug.Event("Join.requested","gameplay","","FrontierGame.Join");
             Disconnect();interactionChoice="";sequence=0;observedWin=-1;Rules=null;State=null;
             try{lan=LanSession.Join(Profile.id,HostAddress,Port);WireLan();Show("connecting");}catch(Exception e){Notice=e.Message;Show("lan");}
         }
@@ -162,11 +163,11 @@ namespace Mayo.Frontier.Presentation
         {
             lan.PeerJoined+=id=>{if(!Rules.AddPlayer(id)){lan.DisconnectPeer(id);return;}Notice="Player "+id+" joined.";};
             lan.PeerLeft+=id=>{if(IsClient){Notice="The host disconnected. Rejoin or start a new session.";Disconnect();Rules=null;State=null;Show("lan");}else{Rules?.Disconnect(id);Notice="Player "+id+" disconnected.";}};
-            lan.CommandReceived+=(id,json)=>{if(!SessionStarted)return;try{var command=JsonUtility.FromJson<Command>(json);if(command==null||!new[]{"move","aim","interact","attack","build","craft","assign"}.Contains(command.kind)){lan.DisconnectPeer(id);return;}var result=Rules.Apply(id,command);if(result.accepted)CommandsAccepted++;}catch(Exception){lan.DisconnectPeer(id);}};
+            lan.CommandReceived+=(id,json)=>{if(!SessionStarted)return;try{var command=JsonUtility.FromJson<Command>(json);if(command==null||!new[]{"move","aim","interact","attack","build","craft","assign"}.Contains(command.kind)){lan.DisconnectPeer(id);return;}var result=Rules.Apply(id,command); /* workbench-debug-network-result */ if(command.kind!="move" && command.kind!="aim") WorkbenchDebug.Event(command.kind+(result.accepted?".accepted":".rejected"),"network-simulation",id.ToString(),"target="+command.targetId+"; option="+command.option+"; result="+result.reason);if(result.accepted)CommandsAccepted++;}catch(Exception){lan.DisconnectPeer(id);}};
             lan.SnapshotReceived+=json=>{try{var snapshot=JsonUtility.FromJson<FrontierSnapshot>(json);var next=snapshot?.state;if(next==null||next.configId!=Profile.id||next.players==null||next.players.Count>4)throw new InvalidDataException("Host sent an incompatible snapshot.");int priorChapter=State?.chapter??0;string priorPhase=State?.phase;State=next;SessionStarted=snapshot.started;SnapshotsReceived++;if(ScreenName=="connecting"||ScreenName=="lobby"||priorChapter!=next.chapter||(ScreenName=="result"&&priorPhase!=next.phase)){string nextScreen=SessionStarted?"play":"lobby";if(ScreenName!=nextScreen)Show(nextScreen);}}catch(Exception e){Notice=e.Message;Disconnect();Show("lan");}};
             lan.Faulted+=reason=>{Notice=reason;if(IsClient){Disconnect();Show("lan");}};
         }
-        public void Disconnect(){SessionStarted=false;discovery?.Dispose();discovery=null;lan?.Dispose();lan=null;}
+        public void Disconnect(){ /* workbench-debug */ WorkbenchDebug.Event("Disconnect.requested","gameplay","","FrontierGame.Disconnect"); SessionStarted=false;discovery?.Dispose();discovery=null;lan?.Dispose();lan=null;}
         public void ScanRooms(Action<LanRoom[]> done)
         {
             Task.Run(()=>{try{var rooms=LanDiscovery.Scan(Profile.id,700,Port+1);lock(callbacks)callbacks.Enqueue(()=>done(rooms));}catch(Exception e){lock(callbacks)callbacks.Enqueue(()=>{Notice=e.Message;done(new LanRoom[0]);});}});
