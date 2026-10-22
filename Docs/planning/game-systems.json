@@ -1,0 +1,482 @@
+{
+  "schemaVersion": 1,
+  "gameId": "game:52ce9a56-648b-4c13-9b2e-1a90cffd0be0--stormline-express",
+  "title": "Stormline Express systems",
+  "engine": "Unity",
+  "concept": "Repair track and radio faults, manage boiler pressure, collect supplies and rescue passengers along a storm route.",
+  "originality": "Preserve the existing project expression and existing licensed-source boundaries. This migration neither approves new custom systems/assets nor proves distribution rights.",
+  "constraints": [
+    "Documentation migration only; runtime, assets and player saves are unchanged.",
+    "Source-observed implementation is not marked verified. All new acceptance checks remain pending.",
+    "Use the existing owned-asset manifest evidence; declared selection does not prove import, active use, compatibility or redistribution permission."
+  ],
+  "players": {
+    "min": null,
+    "max": null,
+    "modes": [
+      "Solo campaign",
+      "LAN cooperative campaign"
+    ],
+    "notes": "Mode counts are source/design declarations with per-mode limitations. This audit did not perform new physical-controller or separate-machine network tests."
+  },
+  "systems": [
+    {
+      "id": "gameplay",
+      "kind": "mechanics",
+      "title": "Gameplay runtime",
+      "status": "unresolved",
+      "summary": "Existing runtime orchestration and game-specific behavior. Review the selected entry point and source before implementation changes.",
+      "parentId": null,
+      "tier": "primary",
+      "dependencies": [],
+      "interfaces": [],
+      "events": [],
+      "assets": [],
+      "acceptance": [
+        {
+          "id": "native-gameplay",
+          "text": "Verify the documented behavior in the selected native development build; record build identity, expected/actual outcome and rejection cases before marking this system passed.",
+          "status": "pending",
+          "evidence": []
+        }
+      ],
+      "promptSections": [
+        {
+          "title": "Audit source and identity",
+          "body": "Repository securelyprogramming/unity-stormline-express; HEAD 2d1e9fc664e762f07aca8a453beab7e406610877. Selected source is hash-pinned in Docs/planning/source-audit.json."
+        }
+      ]
+    },
+    {
+      "id": "world",
+      "kind": "world",
+      "title": "World / section model",
+      "status": "unresolved",
+      "summary": "Named section catalog and source world generation. Empty schematic geometry is unverified; level records do not establish engine adapters.",
+      "parentId": null,
+      "tier": "primary",
+      "dependencies": [],
+      "interfaces": [],
+      "events": [],
+      "assets": [],
+      "acceptance": [
+        {
+          "id": "native-world",
+          "text": "Verify the documented behavior in the selected native development build; record build identity, expected/actual outcome and rejection cases before marking this system passed.",
+          "status": "pending",
+          "evidence": []
+        }
+      ],
+      "promptSections": [
+        {
+          "title": "Audit source and identity",
+          "body": "Repository securelyprogramming/unity-stormline-express; HEAD 2d1e9fc664e762f07aca8a453beab7e406610877. Selected source is hash-pinned in Docs/planning/source-audit.json."
+        }
+      ]
+    },
+    {
+      "id": "presentation",
+      "kind": "ui",
+      "title": "Presentation and owned resources",
+      "status": "unresolved",
+      "summary": "Existing interface, menu, art and audio integration. Asset observations retain their original evidence limits.",
+      "parentId": null,
+      "tier": "primary",
+      "dependencies": [],
+      "interfaces": [],
+      "events": [],
+      "assets": [
+        {
+          "key": "item:988",
+          "url": "http://192.168.1.101:8090/purchases/76#item-988",
+          "name": "POLY - Survival Character & Customizer",
+          "status": "observed",
+          "evidence": [
+            {
+              "path": "ContentSource/Art/presentation-selection.json",
+              "url": null,
+              "kind": "declared-selection",
+              "detail": "Project manifest selects POLY - Survival Character & Customizer. Selection does not establish import, active use, or license entitlement."
+            },
+            {
+              "path": "Game/Assets/Resources/FrontierPurchasedArt.json",
+              "url": null,
+              "kind": "runtime-config",
+              "detail": "Runtime Resources configuration names selected asset Survival/Female_Survival_Unity_SK.fbx; native gameplay appearance has not been verified."
+            }
+          ]
+        },
+        {
+          "key": "item:1008",
+          "url": "http://192.168.1.101:8090/purchases/77#item-1008",
+          "name": "POLYGON - Shops Pack",
+          "status": "observed",
+          "evidence": [
+            {
+              "path": "ContentSource/Art/presentation-selection.json",
+              "url": null,
+              "kind": "declared-selection",
+              "detail": "Project manifest selects POLYGON - Shops Pack. Selection does not establish import, active use, or license entitlement."
+            },
+            {
+              "path": "Game/Assets/Resources/FrontierPurchasedArt.json",
+              "url": null,
+              "kind": "runtime-config",
+              "detail": "Runtime Resources configuration names selected asset Shops/Generic_01_A.png; native gameplay appearance has not been verified."
+            }
+          ]
+        },
+        {
+          "key": "item:980",
+          "url": "http://192.168.1.101:8090/purchases/76#item-980",
+          "name": "Spline Builder Plugin",
+          "status": "observed",
+          "evidence": [
+            {
+              "path": "ContentSource/Art/selection.json",
+              "url": null,
+              "kind": "declared-selection",
+              "detail": "Project manifest selects Spline Builder Plugin. Selection does not establish import, active use, or license entitlement."
+            },
+            {
+              "path": "Game/Assets/Frontier/Unity/Art/FrontierWorldView.cs",
+              "url": null,
+              "kind": "runtime-reference",
+              "detail": "Source references selected asset LicensedFrontier/SplineBuilderFooting/SM_StoneFoot; runtime appearance has not been verified."
+            },
+            {
+              "path": "tools/playtest/restore_selection.py",
+              "url": null,
+              "kind": "runtime-reference",
+              "detail": "Source references selected asset SplineBuilderFooting/SM_StoneFoot.fbx; runtime appearance has not been verified."
+            },
+            {
+              "path": "Game/Assets/Editor/PrepareFrontier.cs",
+              "url": null,
+              "kind": "runtime-reference",
+              "detail": "Source references selected asset LicensedFrontier/SplineBuilderFooting/Polygon_Texture2; runtime appearance has not been verified."
+            }
+          ]
+        },
+        {
+          "key": "item:438",
+          "url": "http://192.168.1.101:8090/purchases/29#item-438",
+          "name": "WOOD UI ELEMENTS",
+          "status": "observed",
+          "evidence": [
+            {
+              "path": "ContentSource/Art/presentation-selection.json",
+              "url": null,
+              "kind": "declared-selection",
+              "detail": "Project manifest selects WOOD UI ELEMENTS. Selection does not establish import, active use, or license entitlement."
+            },
+            {
+              "path": "Game/Assets/Resources/FrontierPurchasedArt.json",
+              "url": null,
+              "kind": "runtime-config",
+              "detail": "Runtime Resources configuration names selected asset UI/Button.png; native gameplay appearance has not been verified."
+            }
+          ]
+        }
+      ],
+      "acceptance": [
+        {
+          "id": "native-presentation",
+          "text": "Verify the documented behavior in the selected native development build; record build identity, expected/actual outcome and rejection cases before marking this system passed.",
+          "status": "pending",
+          "evidence": []
+        }
+      ],
+      "promptSections": [
+        {
+          "title": "Audit source and identity",
+          "body": "Repository securelyprogramming/unity-stormline-express; HEAD 2d1e9fc664e762f07aca8a453beab7e406610877. Selected source is hash-pinned in Docs/planning/source-audit.json."
+        }
+      ]
+    },
+    {
+      "id": "persistence",
+      "kind": "save",
+      "title": "Progress and save boundary",
+      "status": "unresolved",
+      "summary": "Current save/progression interfaces require verification before changing schema, checkpoints or player profiles.",
+      "parentId": null,
+      "tier": "primary",
+      "dependencies": [],
+      "interfaces": [],
+      "events": [],
+      "assets": [],
+      "acceptance": [
+        {
+          "id": "native-persistence",
+          "text": "Verify the documented behavior in the selected native development build; record build identity, expected/actual outcome and rejection cases before marking this system passed.",
+          "status": "pending",
+          "evidence": []
+        }
+      ],
+      "promptSections": [
+        {
+          "title": "Audit source and identity",
+          "body": "Repository securelyprogramming/unity-stormline-express; HEAD 2d1e9fc664e762f07aca8a453beab7e406610877. Selected source is hash-pinned in Docs/planning/source-audit.json."
+        }
+      ]
+    },
+    {
+      "id": "input",
+      "kind": "input",
+      "title": "Input",
+      "status": "unresolved",
+      "summary": "Candidate source matches for this concern; lexical matches alone do not establish a distinct active system or behavior. For example, a Save/WriteAllText match may be diagnostics rather than player persistence. Review ownership and native behavior before implementation changes.",
+      "parentId": "gameplay",
+      "tier": "secondary",
+      "dependencies": [],
+      "interfaces": [],
+      "events": [],
+      "assets": [],
+      "acceptance": [
+        {
+          "id": "native-input",
+          "text": "Verify the documented behavior in the selected native development build; record build identity, expected/actual outcome and rejection cases before marking this system passed.",
+          "status": "pending",
+          "evidence": []
+        }
+      ],
+      "promptSections": [
+        {
+          "title": "Source observations, not runtime acceptance",
+          "body": "Game/Assets/Frontier/Unity/FrontierGame.cs:36 (SHA256 465b04fb9705b254516571caa6691274921d9553b44bb47c815de299aa1f6a19)\nInputAction move,aim,interact,attack,build,craft,pause,journal,cancel;"
+        }
+      ]
+    },
+    {
+      "id": "locomotion",
+      "kind": "locomotion",
+      "title": "Locomotion",
+      "status": "unresolved",
+      "summary": "Candidate source matches for this concern; lexical matches alone do not establish a distinct active system or behavior. For example, a Save/WriteAllText match may be diagnostics rather than player persistence. Review ownership and native behavior before implementation changes.",
+      "parentId": "gameplay",
+      "tier": "secondary",
+      "dependencies": [],
+      "interfaces": [],
+      "events": [],
+      "assets": [],
+      "acceptance": [
+        {
+          "id": "native-locomotion",
+          "text": "Verify the documented behavior in the selected native development build; record build identity, expected/actual outcome and rejection cases before marking this system passed.",
+          "status": "pending",
+          "evidence": []
+        }
+      ],
+      "promptSections": [
+        {
+          "title": "Source observations, not runtime acceptance",
+          "body": "Game/Assets/Frontier/Unity/FrontierGame.cs:67 (SHA256 465b04fb9705b254516571caa6691274921d9553b44bb47c815de299aa1f6a19)\nGameplay=new InputActionMap(\"Gameplay\");move=Gameplay.AddAction(\"Move\",InputActionType.Value,expectedControlLayout:\"Vector2\");move.AddCompositeBinding(\"2DVector\").With(\"Up\",\"<Keyboard>/w\").With(\"Down\",\"<Keyboard>/s\").With(\"Left\",\"<Keyboard>/a\").With(\"Right\",\"<Keyboard>/d\");move.AddBinding(\"<Gamepad>/leftStick\");\n\nGame/Assets/Frontier/Unity/FrontierProfile.cs:61 (SHA256 2b4ce1c1fbdfec2dcbb3f9787069a7458ae3b0fe18628d90b3d4a2dabc7644e0)\nif(valid){string backupTemp=path+\".bak.tmp\";File.WriteAllText(backupTemp,old);if(File.Exists(path+\".bak\"))File.Replace(backupTemp,path+\".bak\",null);else File.Move(backupTemp,path+\".bak\");}"
+        }
+      ]
+    },
+    {
+      "id": "combat",
+      "kind": "combat",
+      "title": "Combat",
+      "status": "unresolved",
+      "summary": "Candidate source matches for this concern; lexical matches alone do not establish a distinct active system or behavior. For example, a Save/WriteAllText match may be diagnostics rather than player persistence. Review ownership and native behavior before implementation changes.",
+      "parentId": "gameplay",
+      "tier": "secondary",
+      "dependencies": [],
+      "interfaces": [],
+      "events": [],
+      "assets": [],
+      "acceptance": [
+        {
+          "id": "native-combat",
+          "text": "Verify the documented behavior in the selected native development build; record build identity, expected/actual outcome and rejection cases before marking this system passed.",
+          "status": "pending",
+          "evidence": []
+        }
+      ],
+      "promptSections": [
+        {
+          "title": "Source observations, not runtime acceptance",
+          "body": "Game/Assets/Frontier/Unity/FrontierGame.cs:70 (SHA256 465b04fb9705b254516571caa6691274921d9553b44bb47c815de299aa1f6a19)\nattack=Gameplay.AddAction(\"Attack\",InputActionType.Button,\"<Mouse>/leftButton\");attack.AddBinding(\"<Gamepad>/rightTrigger\");attack.AddBinding(\"<Gamepad>/buttonWest\");"
+        }
+      ]
+    },
+    {
+      "id": "story",
+      "kind": "story",
+      "title": "Story",
+      "status": "unresolved",
+      "summary": "Candidate source matches for this concern; lexical matches alone do not establish a distinct active system or behavior. For example, a Save/WriteAllText match may be diagnostics rather than player persistence. Review ownership and native behavior before implementation changes.",
+      "parentId": "gameplay",
+      "tier": "secondary",
+      "dependencies": [],
+      "interfaces": [],
+      "events": [],
+      "assets": [],
+      "acceptance": [
+        {
+          "id": "native-story",
+          "text": "Verify the documented behavior in the selected native development build; record build identity, expected/actual outcome and rejection cases before marking this system passed.",
+          "status": "pending",
+          "evidence": []
+        }
+      ],
+      "promptSections": [
+        {
+          "title": "Source observations, not runtime acceptance",
+          "body": "Game/Assets/Frontier/Unity/FrontierGame.cs:32 (SHA256 465b04fb9705b254516571caa6691274921d9553b44bb47c815de299aa1f6a19)\npublic string ConnectionLabel {get{return lan==null?\"Solo campaign\":lan.IsHost?\"LAN host · \"+lan.PeerIds.Length+\" / 3 guests · port \"+lan.Port:lan.IsConnected?\"LAN connected · player \"+lan.LocalPlayerId:\"Connecting to LAN host…\";}}\n\nGame/Assets/Frontier/Unity/FrontierProfile.cs:10 (SHA256 2b4ce1c1fbdfec2dcbb3f9787069a7458ae3b0fe18628d90b3d4a2dabc7644e0)\n[Serializable] public sealed class ChapterInfo { public int number,layoutSeed; public string title,story; }"
+        }
+      ]
+    },
+    {
+      "id": "save-storage",
+      "kind": "save",
+      "title": "Save",
+      "status": "unresolved",
+      "summary": "Candidate source matches for this concern; lexical matches alone do not establish a distinct active system or behavior. For example, a Save/WriteAllText match may be diagnostics rather than player persistence. Review ownership and native behavior before implementation changes.",
+      "parentId": "persistence",
+      "tier": "secondary",
+      "dependencies": [],
+      "interfaces": [],
+      "events": [],
+      "assets": [],
+      "acceptance": [
+        {
+          "id": "native-save-storage",
+          "text": "Verify the documented behavior in the selected native development build; record build identity, expected/actual outcome and rejection cases before marking this system passed.",
+          "status": "pending",
+          "evidence": []
+        }
+      ],
+      "promptSections": [
+        {
+          "title": "Source observations, not runtime acceptance",
+          "body": "Game/Assets/Frontier/Unity/FrontierGame.cs:82 (SHA256 465b04fb9705b254516571caa6691274921d9553b44bb47c815de299aa1f6a19)\npublic void SaveSettings(){Progress.bindings=Gameplay.SaveBindingOverridesAsJson();Store.Save(Progress);if(Store.Notice!=\"\")Notice=Store.Notice;}\n\nGame/Assets/Frontier/Unity/FrontierProfile.cs:36 (SHA256 2b4ce1c1fbdfec2dcbb3f9787069a7458ae3b0fe18628d90b3d4a2dabc7644e0)\nif(value.Length>131072)throw new InvalidDataException(\"Save exceeds maximum size.\");"
+        }
+      ]
+    },
+    {
+      "id": "menus",
+      "kind": "menus",
+      "title": "Menus",
+      "status": "unresolved",
+      "summary": "Candidate source matches for this concern; lexical matches alone do not establish a distinct active system or behavior. For example, a Save/WriteAllText match may be diagnostics rather than player persistence. Review ownership and native behavior before implementation changes.",
+      "parentId": "presentation",
+      "tier": "secondary",
+      "dependencies": [],
+      "interfaces": [],
+      "events": [],
+      "assets": [],
+      "acceptance": [
+        {
+          "id": "native-menus",
+          "text": "Verify the documented behavior in the selected native development build; record build identity, expected/actual outcome and rejection cases before marking this system passed.",
+          "status": "pending",
+          "evidence": []
+        }
+      ],
+      "promptSections": [
+        {
+          "title": "Source observations, not runtime acceptance",
+          "body": "Game/Assets/Frontier/Unity/FrontierGame.cs:73 (SHA256 465b04fb9705b254516571caa6691274921d9553b44bb47c815de299aa1f6a19)\npause=Gameplay.AddAction(\"Pause\",InputActionType.Button,\"<Keyboard>/escape\");pause.AddBinding(\"<Gamepad>/start\");"
+        }
+      ]
+    },
+    {
+      "id": "progression",
+      "kind": "progression",
+      "title": "Progression",
+      "status": "unresolved",
+      "summary": "Candidate source matches for this concern; lexical matches alone do not establish a distinct active system or behavior. For example, a Save/WriteAllText match may be diagnostics rather than player persistence. Review ownership and native behavior before implementation changes.",
+      "parentId": "persistence",
+      "tier": "secondary",
+      "dependencies": [],
+      "interfaces": [],
+      "events": [],
+      "assets": [],
+      "acceptance": [
+        {
+          "id": "native-progression",
+          "text": "Verify the documented behavior in the selected native development build; record build identity, expected/actual outcome and rejection cases before marking this system passed.",
+          "status": "pending",
+          "evidence": []
+        }
+      ],
+      "promptSections": [
+        {
+          "title": "Source observations, not runtime acceptance",
+          "body": "Game/Assets/Frontier/Unity/FrontierGame.cs:60 (SHA256 465b04fb9705b254516571caa6691274921d9553b44bb47c815de299aa1f6a19)\nStore=new FrontierProgress(string.IsNullOrEmpty(directory)?Path.Combine(Application.persistentDataPath,\"Campaigns\"):directory,Profile.id);Progress=Store.Load();Notice=Store.Notice;ChapterChoice=Progress.unlocked;\n\nGame/Assets/Frontier/Unity/FrontierProfile.cs:22 (SHA256 2b4ce1c1fbdfec2dcbb3f9787069a7458ae3b0fe18628d90b3d4a2dabc7644e0)\npublic int schema=1,unlocked=1,completedMask,quality=1;"
+        }
+      ]
+    }
+  ],
+  "connections": [],
+  "questions": [
+    "Which native build and source snapshot should provide acceptance evidence for the currently declared sections?",
+    "Which source-observed interfaces need explicit payload contracts before parallel implementation?",
+    "Which owned-asset candidates have current import, license and runtime binding checks, beyond selection evidence?"
+  ],
+  "releaseGates": [
+    {
+      "id": "originality-rights",
+      "status": "pending",
+      "notes": "",
+      "evidence": []
+    },
+    {
+      "id": "complete-loop",
+      "status": "pending",
+      "notes": "",
+      "evidence": []
+    },
+    {
+      "id": "controls-accessibility",
+      "status": "pending",
+      "notes": "",
+      "evidence": []
+    },
+    {
+      "id": "save-migration",
+      "status": "pending",
+      "notes": "",
+      "evidence": []
+    },
+    {
+      "id": "multiplayer",
+      "status": "pending",
+      "notes": "",
+      "evidence": []
+    },
+    {
+      "id": "build-platform",
+      "status": "pending",
+      "notes": "",
+      "evidence": []
+    },
+    {
+      "id": "quality-performance",
+      "status": "pending",
+      "notes": "",
+      "evidence": []
+    },
+    {
+      "id": "steam-integration",
+      "status": "pending",
+      "notes": "",
+      "evidence": []
+    },
+    {
+      "id": "store-review",
+      "status": "pending",
+      "notes": "",
+      "evidence": []
+    },
+    {
+      "id": "privacy-security",
+      "status": "pending",
+      "notes": "",
+      "evidence": []
+    }
+  ]
+}

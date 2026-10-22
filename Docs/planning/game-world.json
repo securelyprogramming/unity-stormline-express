@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "gameId": "game:52ce9a56-648b-4c13-9b2e-1a90cffd0be0--stormline-express",
+  "title": "Stormline Express world and sections",
+  "topology": "connected-levels",
+  "requirements": [
+    "Preserve current runtime behavior and authored source; these records document inspected code/configuration only.",
+    "Named sections and mode intent are separate from native verification, checkpoint support and geometry.",
+    "Source review only for this migration; no new native playtest was run. Existing saved acceptance evidence retains its original scope.",
+    "Empty layouts are explicitly unverified schematic containers. They contain no invented geometry, spawn locations, portals or population rates.",
+    "World editor bindings are planning references; none of these documents changes engine state, installs assets, or implements level launching."
+  ],
+  "restrictions": {
+    "notes": [
+      "No invented portals, spawn rates, coordinates or asset compatibility claims. Empty layouts must be replaced only by reviewed source-derived/captured geometry."
+    ],
+    "forbiddenNodeKinds": [],
+    "maxNodesPerLevel": 512
+  },
+  "levels": [
+    {
+      "id": "frontier-chapter-1",
+      "title": "The Broken Signal",
+      "kind": "exterior",
+      "parentLevelId": null,
+      "layout": {
+        "schemaVersion": 1,
+        "id": "audit-stormline-express-frontier-chapter-1",
+        "name": "The Broken Signal — unverified schematic",
+        "gameId": "stormline-express",
+        "engine": "Unity",
+        "plane": "XZ",
+        "units": "meters",
+        "halfWidth": 24,
+        "halfDepth": 24,
+        "seed": 6031,
+        "planningOnly": true,
+        "nodes": []
+      },
+      "role": "mission",
+      "archetype": null,
+      "view": null,
+      "presentation": "3d",
+      "modeIds": [],
+      "description": "Ada takes the relief train into a storm after the town radio goes quiet. Source: Game/Assets/Resources/FrontierProfiles.json:715. SHA256 22f9438021db0b8f6cefa7cd8b2297da439df23e9663500efe87874d661f859b. This empty schematic has no verified spatial alignment with the runtime.",
+      "snapshot": null,
+      "systemIds": [
+        "world"
+      ],
+      "spawnRules": [],
+      "areas": [],
+      "objects": []
+    },
+    {
+      "id": "frontier-chapter-2",
+      "title": "Pressure and Rain",
+      "kind": "exterior",
+      "parentLevelId": null,
+      "layout": {
+        "schemaVersion": 1,
+        "id": "audit-stormline-express-frontier-chapter-2",
+        "name": "Pressure and Rain — unverified schematic",
+        "gameId": "stormline-express",
+        "engine": "Unity",
+        "plane": "XZ",
+        "units": "meters",
+        "halfWidth": 24,
+        "halfDepth": 24,
+        "seed": 6031,
+        "planningOnly": true,
+        "nodes": []
+      },
+      "role": "mission",
+      "archetype": null,
+      "view": null,
+      "presentation": "3d",
+      "modeIds": [],
+      "description": "Bo counts stranded passengers while the boiler leaks and the rails begin to buckle. Source: Game/Assets/Resources/FrontierProfiles.json:721. SHA256 22f9438021db0b8f6cefa7cd8b2297da439df23e9663500efe87874d661f859b. This empty schematic has no verified spatial alignment with the runtime.",
+      "snapshot": null,
+      "systemIds": [
+        "world"
+      ],
+      "spawnRules": [],
+      "areas": [],
+      "objects": []
+    },
+    {
+      "id": "frontier-chapter-3",
+      "title": "The Last Platform",
+      "kind": "exterior",
+      "parentLevelId": null,
+      "layout": {
+        "schemaVersion": 1,
+        "id": "audit-stormline-express-frontier-chapter-3",
+        "name": "The Last Platform — unverified schematic",
+        "gameId": "stormline-express",
+        "engine": "Unity",
+        "plane": "XZ",
+        "units": "meters",
+        "halfWidth": 24,
+        "halfDepth": 24,
+        "seed": 6031,
+        "planningOnly": true,
+        "nodes": []
+      },
+      "role": "mission",
+      "archetype": null,
+      "view": null,
+      "presentation": "3d",
+      "modeIds": [],
+      "description": "Lark lights the final platform. The crew must bring both train and people through the storm. Source: Game/Assets/Resources/FrontierProfiles.json:727. SHA256 22f9438021db0b8f6cefa7cd8b2297da439df23e9663500efe87874d661f859b. This empty schematic has no verified spatial alignment with the runtime.",
+      "snapshot": null,
+      "systemIds": [
+        "world"
+      ],
+      "spawnRules": [],
+      "areas": [],
+      "objects": []
+    }
+  ],
+  "portals": [],
+  "assetBindings": [],
+  "streaming": {
+    "seed": 6031,
+    "chunkSize": 64,
+    "radius": 2,
+    "maxLoadedChunks": 25,
+    "notes": "No runtime streaming claim is made by this audit."
+  },
+  "archetype": "custom",
+  "view": "top-down",
+  "modes": [
+    {
+      "id": "campaign",
+      "title": "Solo campaign",
+      "kind": "campaign",
+      "minPlayers": 1,
+      "maxPlayers": 1,
+      "systemIds": [],
+      "description": "Current FrontierGame selects this profile and its chapters; fresh native completion is pending."
+    },
+    {
+      "id": "lan-coop",
+      "title": "LAN cooperative campaign",
+      "kind": "co-op",
+      "minPlayers": 1,
+      "maxPlayers": 4,
+      "systemIds": [],
+      "description": "Profile declares 1–4 LAN players and FrontierGame has network code; separate-machine authority/reconnect acceptance is pending."
+    }
+  ],
+  "systemIds": [
+    "gameplay",
+    "presentation",
+    "persistence"
+  ],
+  "spawnRules": [],
+  "story": {
+    "arcs": [
+      {
+        "id": "main-story",
+        "title": "Main authored story",
+        "kind": "main",
+        "parentArcId": null,
+        "description": "Authored narrative source. Story chapters are not automatically independent runtime maps or verified completion gates.",
+        "systemIds": [
+          "story"
+        ],
+        "prerequisites": []
+      }
+    ],
+    "beats": [
+      {
+        "id": "story-1",
+        "arcId": "main-story",
+        "title": "The Broken Signal",
+        "description": "Ada takes the relief train into a storm after the town radio goes quiet.",
+        "systemIds": [],
+        "prerequisites": [],
+        "target": null
+      },
+      {
+        "id": "story-2",
+        "arcId": "main-story",
+        "title": "Pressure and Rain",
+        "description": "Bo counts stranded passengers while the boiler leaks and the rails begin to buckle.",
+        "systemIds": [],
+        "prerequisites": [],
+        "target": null
+      },
+      {
+        "id": "story-3",
+        "arcId": "main-story",
+        "title": "The Last Platform",
+        "description": "Lark lights the final platform. The crew must bring both train and people through the storm.",
+        "systemIds": [],
+        "prerequisites": [],
+        "target": null
+      }
+    ]
+  }
+}
